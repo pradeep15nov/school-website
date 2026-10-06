@@ -55,7 +55,7 @@ img, svg { max-width: 100%; display: block; }
 .brand small { font-family: "Inter", sans-serif; font-weight: 500; color: var(--muted); font-size: .75rem; }
 .crest {
   width: 42px; height: 42px; border-radius: 12px 12px 20px 20px; background: var(--green);
-  color: var(--gold); display: grid; place-items: center; font-size: 1.3rem;
+  color: var(--gold); display: grid; place-items: center; font-size: 1rem; font-weight: 700;
 }
 .nav-links { display: flex; align-items: center; gap: 1.6rem; }
 .nav-links a { text-decoration: none; color: var(--ink); font-weight: 500; }
@@ -166,3 +166,26 @@ address p { margin: .3rem 0; }
 @media (max-width: 480px) {
   .cards, .gallery { grid-template-columns: 1fr; }
 }
+
+/* Login and portal */
+.auth-page { background: var(--bg-alt); min-height: 100vh; }
+.back-link { text-decoration: none; font-weight: 500; }
+.auth-main { display: grid; place-items: center; padding: clamp(2rem, 6vw, 4rem) 16px; }
+.auth-card {
+  width: min(420px, 100%); background: #fff; border: 1px solid var(--line); border-radius: 20px;
+  padding: 2rem; box-shadow: var(--shadow);
+}
+.auth-card h1 { font-size: 1.8rem; }
+.form-plain { border: 0; box-shadow: none; padding: 0; margin-top: 1rem; }
+.password-wrap { position: relative; display: grid; }
+.password-wrap input { padding-right: 4.2rem; }
+.show-pass {
+  position: absolute; right: .5rem; top: 50%; transform: translateY(-50%); background: none; border: 0;
+  color: var(--green); font: inherit; font-size: .85rem; font-weight: 600; cursor: pointer;
+}
+.demo-note { margin-top: 1.5rem; padding: 1rem 1.2rem; background: #fdf6e6; border-radius: 12px; font-size: .9rem; }
+.demo-note p { margin: .4rem 0 0; }
+.muted { color: var(--muted); font-size: .85rem; }
+.btn-small-ghost { padding: .45rem 1.1rem; }
+.portal-cards { margin-top: 1.5rem; }
+.portal-note { margin-top: 1.5rem; }

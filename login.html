@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login | R. P. Memorial School, Rewa (MP)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="auth-page">
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <span class="crest" aria-hidden="true">RP</span>
+        <span>R. P. Memorial School<br><small>Rewa (MP)</small></span>
+      </a>
+      <a href="index.html" class="back-link">← Back to website</a>
+    </div>
+  </header>
+
+  <main class="auth-main">
+    <div class="auth-card">
+      <p class="eyebrow">Student · Parent · Teacher</p>
+      <h1>Login to your portal</h1>
+      <form id="login-form" class="form form-plain" novalidate>
+        <label>Username<input name="username" autocomplete="username" required></label>
+        <label>Password
+          <span class="password-wrap">
+            <input name="password" type="password" autocomplete="current-password" required>
+            <button type="button" class="show-pass" aria-label="Show password">Show</button>
+          </span>
+        </label>
+        <button class="btn" type="submit">Login</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+      <div class="demo-note">
+        <strong>Demo accounts</strong>
+        <p>student / student123<br>parent / parent123<br>teacher / teacher123</p>
+        <p class="muted">This is a demo login that runs in the browser only. It is not secure.</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/auth.js"></script>
+  <script>
+    if (Auth.currentUser()) location.replace("portal.html");
+
+    const form = document.getElementById("login-form");
+    const status = form.querySelector(".form-status");
+    const pass = form.elements.password;
+    form.querySelector(".show-pass").addEventListener("click", (e) => {
+      const show = pass.type === "password";
+      pass.type = show ? "text" : "password";
+      e.target.textContent = show ? "Hide" : "Show";
+    });
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const { username, password } = form.elements;
+      if (!username.value.trim() || !password.value) {
+        status.textContent = "Please enter your username and password.";
+        status.className = "form-status err";
+        return;
+      }
+      if (Auth.login(username.value, password.value)) {
+        location.href = "portal.html";
+      } else {
+        status.textContent = "Wrong username or password.";
+        status.className = "form-status err";
+        password.value = "";
+      }
+    });
+  </script>
+</body>
+</html>

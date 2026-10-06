@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Portal | R. P. Memorial School, Rewa (MP)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/auth.js"></script>
+  <script>if (!Auth.currentUser()) location.replace("login.html");</script>
+</head>
+<body class="auth-page">
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <span class="crest" aria-hidden="true">RP</span>
+        <span>R. P. Memorial School<br><small>Rewa (MP)</small></span>
+      </a>
+      <button id="logout" class="btn btn-ghost btn-small-ghost">Logout</button>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <p class="eyebrow" id="role"></p>
+      <h1 id="welcome"></h1>
+      <p class="lead" id="detail"></p>
+
+      <div class="cards portal-cards">
+        <article class="card"><div class="card-icon">📅</div><h3>Timetable</h3><p>Mon–Sat, 8:30 am – 2:30 pm. Science lab on Tuesdays.</p></article>
+        <article class="card"><div class="card-icon">📝</div><h3>Homework</h3><p>Maths: Chapter 6 exercises. English: essay on “My Village”.</p></article>
+        <article class="card"><div class="card-icon">📊</div><h3>Attendance</h3><p>94% this term (102 of 108 days).</p></article>
+        <article class="card"><div class="card-icon">📣</div><h3>Notices</h3><p>Parent–Teacher Meeting on Nov 02. Diwali break Oct 30 – Nov 03.</p></article>
+      </div>
+      <p class="muted portal-note">Demo portal: the details above are sample data.</p>
+    </div>
+  </main>
+
+  <script>
+    const user = Auth.currentUser();
+    if (user) {
+      document.getElementById("role").textContent = user.role + " portal";
+      document.getElementById("welcome").textContent = "Welcome, " + user.name;
+      document.getElementById("detail").textContent = user.detail;
+    }
+    document.getElementById("logout").addEventListener("click", () => {
+      Auth.logout();
+      location.href = "index.html";
+    });
+  </script>
+</body>
+</html>
