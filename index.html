@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Greenfield Public School</title>
+  <meta name="description" content="Greenfield Public School: nurturing curious minds since 1985.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#top" class="brand">
+        <span class="crest" aria-hidden="true">G</span>
+        <span>Greenfield<br><small>Public School</small></span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav-links" class="nav-links">
+        <a href="#about">About</a>
+        <a href="#academics">Academics</a>
+        <a href="#news">News &amp; Events</a>
+        <a href="#gallery">Campus</a>
+        <a href="#contact" class="btn btn-small">Apply now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow">Admissions open for 2027–28</p>
+          <h1>Where curious minds grow into confident leaders.</h1>
+          <p class="lead">A caring K–12 community with small classes, inspiring teachers and room to explore science, arts and sport.</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn">Book a campus visit</a>
+            <a href="#academics" class="btn btn-ghost">Explore programs</a>
+          </div>
+        </div>
+        <div class="hero-card" aria-hidden="true">
+          <div class="hero-illustration">
+            <svg viewBox="0 0 320 240" role="img">
+              <rect x="0" y="170" width="320" height="70" fill="#cfe8d5"/>
+              <rect x="70" y="80" width="180" height="100" fill="#fff" stroke="#1f5135" stroke-width="3"/>
+              <polygon points="60,85 160,30 260,85" fill="#1f5135"/>
+              <rect x="145" y="130" width="30" height="50" fill="#f2b84b"/>
+              <rect x="90" y="100" width="30" height="24" fill="#bfe0f2"/>
+              <rect x="200" y="100" width="30" height="24" fill="#bfe0f2"/>
+              <circle cx="160" cy="62" r="10" fill="#f2b84b"/>
+              <line x1="160" y1="30" x2="160" y2="5" stroke="#1f5135" stroke-width="3"/>
+              <polygon points="160,5 182,12 160,19" fill="#e05d44"/>
+              <circle cx="35" cy="160" r="22" fill="#4e9a63"/>
+              <circle cx="285" cy="155" r="26" fill="#4e9a63"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="container stats-grid">
+        <div><strong data-count="1200">0</strong><span>Students</span></div>
+        <div><strong data-count="85">0</strong><span>Teachers</span></div>
+        <div><strong data-count="40">0</strong><span>Years of excellence</span></div>
+        <div><strong data-count="98" data-suffix="%">0</strong><span>Graduation rate</span></div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container two-col">
+        <div>
+          <p class="eyebrow">About us</p>
+          <h2>Learning that feels like home</h2>
+          <p>Since 1985, Greenfield Public School has helped children discover what they love and build the habits to pursue it. Our teachers know every student by name, and our families are part of the journey.</p>
+          <ul class="checks">
+            <li>Average class size of 22 students</li>
+            <li>Smart classrooms and modern science labs</li>
+            <li>Counselling and learning support for every child</li>
+          </ul>
+        </div>
+        <blockquote class="quote">
+          “Education is not the filling of a pail, but the lighting of a fire.”
+          <cite>Our guiding idea, from the Principal’s desk</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <section id="academics" class="section section-alt">
+      <div class="container">
+        <p class="eyebrow center">Academics</p>
+        <h2 class="center">Programs for every stage</h2>
+        <div class="cards">
+          <article class="card">
+            <div class="card-icon">🎨</div>
+            <h3>Primary (K–5)</h3>
+            <p>Play-based learning, phonics, numeracy and lots of art, music and outdoor time.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🔬</div>
+            <h3>Middle (6–8)</h3>
+            <p>Hands-on science, coding clubs and project work that builds independence.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🎓</div>
+            <h3>Senior (9–12)</h3>
+            <p>Science, Commerce and Humanities streams with career and college guidance.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">⚽</div>
+            <h3>Sports &amp; Arts</h3>
+            <p>Football, athletics, swimming, dance, theatre and an annual arts festival.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="news" class="section">
+      <div class="container">
+        <p class="eyebrow">News &amp; Events</p>
+        <h2>What’s happening</h2>
+        <div class="tabs" role="tablist">
+          <button role="tab" class="tab active" data-filter="all" aria-selected="true">All</button>
+          <button role="tab" class="tab" data-filter="event" aria-selected="false">Events</button>
+          <button role="tab" class="tab" data-filter="news" aria-selected="false">News</button>
+        </div>
+        <ul class="news-list">
+          <li data-type="event"><time>Oct 18</time><div><h3>Annual Science Fair</h3><p>Students showcase 60+ projects in the main hall. Parents welcome.</p></div><span class="tag">Event</span></li>
+          <li data-type="news"><time>Oct 10</time><div><h3>U-14 football team wins district cup</h3><p>A 2–1 final win caps an unbeaten season.</p></div><span class="tag tag-news">News</span></li>
+          <li data-type="event"><time>Nov 02</time><div><h3>Parent–Teacher Meeting</h3><p>Term 1 progress reviews for all grades, 9 am to 1 pm.</p></div><span class="tag">Event</span></li>
+          <li data-type="news"><time>Sep 28</time><div><h3>New robotics lab opens</h3><p>Our STEM wing now includes a fully equipped robotics lab.</p></div><span class="tag tag-news">News</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="gallery" class="section section-alt">
+      <div class="container">
+        <p class="eyebrow center">Campus life</p>
+        <h2 class="center">A day at Greenfield</h2>
+        <div class="gallery">
+          <figure style="--c1:#4e9a63;--c2:#1f5135"><span>📚</span><figcaption>Library</figcaption></figure>
+          <figure style="--c1:#f2b84b;--c2:#d08a1c"><span>🧪</span><figcaption>Science labs</figcaption></figure>
+          <figure style="--c1:#5aa6d6;--c2:#2c6f9c"><span>🏊</span><figcaption>Swimming pool</figcaption></figure>
+          <figure style="--c1:#e05d44;--c2:#a63a26"><span>🎭</span><figcaption>Auditorium</figcaption></figure>
+          <figure style="--c1:#8a6bd1;--c2:#5a3fa0"><span>💻</span><figcaption>Computer lab</figcaption></figure>
+          <figure style="--c1:#3fb6a8;--c2:#217a70"><span>🌳</span><figcaption>Green campus</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container two-col">
+        <div>
+          <p class="eyebrow">Get in touch</p>
+          <h2>Plan your visit</h2>
+          <p>Leave your details and our admissions team will call you back within two working days.</p>
+          <address>
+            <p>📍 12 Park Avenue, Greenfield</p>
+            <p>📞 +91 00000 00000</p>
+            <p>✉️ admissions@greenfield.example</p>
+            <p>🕘 Mon–Sat, 8:30 am – 3:30 pm</p>
+          </address>
+        </div>
+        <form class="form" id="enquiry-form" novalidate>
+          <label>Parent’s name<input name="name" required></label>
+          <label>Phone<input name="phone" type="tel" required pattern="[0-9 +\-]{7,}"></label>
+          <label>Grade applying for
+            <select name="grade" required>
+              <option value="">Select a grade</option>
+              <option>Kindergarten</option><option>Grade 1–5</option>
+              <option>Grade 6–8</option><option>Grade 9–12</option>
+            </select>
+          </label>
+          <label>Message<textarea name="message" rows="3"></textarea></label>
+          <button class="btn" type="submit">Send enquiry</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Greenfield Public School. Demo website.</p>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
